@@ -3,8 +3,9 @@ public class StepTracker
 {
  /* to be implemented here */
  
-private ArrayList<Integer> arrList();
+ private ArrayList<Integer> arrList();
  public StepTracker(int steps){
+  arrList = new ArrayList<Integer>();
   arrList.add(steps);
  }
  public double averageSteps(){
