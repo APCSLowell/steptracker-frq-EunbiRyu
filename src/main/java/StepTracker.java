@@ -3,7 +3,7 @@ public class StepTracker
 {
  /* to be implemented here */
  
-private <Integer> arrList();
+private ArrayList<Integer> arrList();
  public StepTracker(int steps){
   arrList.add(steps);
  }
