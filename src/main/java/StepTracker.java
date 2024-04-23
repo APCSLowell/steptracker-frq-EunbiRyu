@@ -20,7 +20,7 @@ public class StepTracker
     days++;
    }
   }
-  return days
+  return days;
  }
  public double averageSteps(){
   if(myStepsList.size() ==0){
