@@ -10,15 +10,8 @@ public class StepTracker
   myStepsList = new ArrayList <Integer>();
   active = steps;
  }
- public double averageSteps(){
-  if(myStepsList.size() ==0){
-   return 0;
-  }
-  double steps = 0;
-  for(int i=0;i<myStepsList.size();i++){
-   steps += myStepsList.get(i);
-  }
-  return steps/myStepsList.size();
+ public void addDailySteps(int daily){
+  myStepsList.add(daily);
  }
  public int activeDays(){
   int days = 0;
@@ -29,8 +22,14 @@ public class StepTracker
   }
   return days
  }
- public void addDailySteps(int daily){
-  myStepsList.add(daily);
+ public double averageSteps(){
+  if(myStepsList.size() ==0){
+   return 0;
+  }
+  double steps = 0;
+  for(int i=0;i<myStepsList.size();i++){
+   steps += myStepsList.get(i);
+  }
+  return steps/myStepsList.size();
  }
- 
 } 
