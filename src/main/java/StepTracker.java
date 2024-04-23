@@ -3,20 +3,31 @@ public class StepTracker
 {
  /* to be implemented here */
  
- private ArrayList <Integer> myStepsList();
+ private ArrayList <Integer> myStepsList;
+ private int active;
+ 
  public StepTracker(int steps){
   myStepsList = new ArrayList <Integer>();
-  myStepsList.add(steps);
+  active = steps;
  }
  public double averageSteps(){
-  int sum=0;
-  for(int i=0;i<myStepsList.size();i++){
-   sum += myStepsList.get(i);
+  if(myStepsList.size() ==0){
+   return 0;
   }
-  return (double)sum/myStepsList.size();
+  double steps = 0;
+  for(int i=0;i<myStepsList.size();i++){
+   steps += myStepsList.get(i);
+  }
+  return steps/myStepsList.size();
  }
  public int activeDays(){
-  return myStepsList.size();
+  int days = 0;
+  for(int i=0; i<myStepsList.size(); i++){
+   if(myStepsList.get(i) >= active){
+    days++;
+   }
+  }
+  return days
  }
  public void addDailySteps(int daily){
   myStepsList.add(daily);
